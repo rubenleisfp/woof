@@ -40,3 +40,16 @@ val dogs = listOf(
     Dog(R.drawable.tzeitel, R.string.dog_name_8, 7, R.string.dog_description_8),
     Dog(R.drawable.leroy, R.string.dog_name_9, 4, R.string.dog_description_9)
 )
+
+/**
+ * Clase que representa un dog y en mayores 2 atributos necesarios para la UI
+ * Un id para poder buscar el dog sobre el cual hemos hecho click en la lista
+ * Un expanded para saber si lo hemos expandido o no su detalle
+ */
+data class DogWrapper(
+    val dog: Dog,
+    val expanded: Boolean,
+    val id: Int
+)
+
+
