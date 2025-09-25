@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id("org.jetbrains.kotlin.plugin.serialization") version libs.versions.kotlin.get()
 }
 
 android {
@@ -51,6 +52,15 @@ dependencies {
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.androidx.compose.material.icons.extended)
+
+    implementation(libs.retrofit.core)
+    implementation(libs.retrofit.core) // Accede a 'retrofit-core'
+    implementation(libs.kotlinx.serialization.json) // Accede a 'kotlinx-serialization-json'
+    implementation(libs.retrofit.converter.kotlinx) // Accede a 'retrofit-converter-kotlinx'
+    implementation(libs.okhttp.core) // Accede a 'okhttp-core
+    implementation(libs.coil.compose)
+    implementation(libs.androidx.compose.material.icons.extended)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
